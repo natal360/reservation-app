@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../shared/product.service';
-import { products } from 'src/app/products';
 
 @Component({
   selector: 'app-product-detail',
@@ -19,7 +18,6 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      // this.product = this.productService.getProductById(params.get('productId'))
       const productObservable = this.productService.getProductById(params.get('productId'))
       productObservable.subscribe(
         (data) => {
