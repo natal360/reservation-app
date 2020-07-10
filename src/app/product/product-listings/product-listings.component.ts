@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
     productObservable.subscribe(
       (data)=> { 
         this.products = data
-    },
+      },
       (err)=> { console.log('次のエラーが発生しました: ' + err)}
     )
 
