@@ -20,7 +20,7 @@ export class ProductListComponent implements OnInit {
       (data)=> { 
         this.products = data
       },
-      (err)=> { console.log('次のエラーが発生しました: ' + err)}
+      (err)=> { console.error('次のエラーが発生しました: ' + err)}
     )
 
   }
